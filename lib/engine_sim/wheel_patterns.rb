@@ -7,11 +7,7 @@ def read_patterns
   asset_path = File.expand_path( 'assets', base_path )
   wheel_path = File.expand_path( 'trigger_wheels', asset_path )
   patterns = {}
-  sectors_key = 'sectors'
-  type_key = 'type'
-  pattern_key = 'pattern'
   repeat_key = 'repeat'
-  wheel_types = [ :even, :missing_tooth, :distributor ]
   Dir.entries( wheel_path ).each do |fn|
     next unless fn.end_with?('.yaml')
     wheel_name = fn[0..-6].to_sym
@@ -25,19 +21,9 @@ def read_patterns
       next
     end
     yaml_data = YAML.load_file( yaml_path )
-    wheel_type = yaml_data[type_key].to_sym
-    unless wheel_types.include?( wheel_type )
-      warn "Skipping unknown wheel type: #{yaml_data['type']}"
-      next
-    end
-    wheel_data = {
-      :sectors => yaml_data[sectors_key],
-      :type => yaml_data[type_key].to_sym,
-      :pattern => []
-    }
     pattern_data = []
     invalid = false
-    yaml_data[pattern_key].each do |item|
+    yaml_data.each do |item|
       if item.class == Hash and item.has_key?(repeat_key)
         arr = item[repeat_key]
         num_repeat = arr.shift
@@ -56,7 +42,14 @@ def read_patterns
       end
     end
     next if invalid
-    wheel_data[:pattern] = pattern_data
+    sectors = 0.0
+    pattern_data.each do | length, state |
+      sectors += length
+    end
+    wheel_data = {
+      :sectors => sectors,
+      :pattern => pattern_data
+    }
     patterns[wheel_name] = wheel_data
   end
   patterns

@@ -38,6 +38,7 @@ def parse_config( config_in )
     :cam_crank_ratio => [ Fixnum, Float ],
     :cam_sector_skip => [ Fixnum ],
     :cam_sector_offset => [ Float ],
+    :cam_pattern_scale => [ Fixnum, Float ],
     :cam_pattern => [ String, Symbol ],
     :crank_sector_skip => [ Fixnum ],
     :crank_sector_offset => [ Float ],

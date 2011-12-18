@@ -36,6 +36,7 @@ OPTIONS:
 --crank freeems_decoder  Set the crank pattern (default: missing_60_2)
 --crankskip 12           Coarse-tune crank start position in number of sectors (usually teeth, default: 0)
 --crankfine 0.34         Fine-tune crank start position in a fraction of a sector ( -1.0 to 1.0, default: 0.0)
+--camscale 1             How long is the crank pattern cycle (default: 2 means twice per cam cycle; 1 means once)
 --conf my_conf           Extra configuration to use (default is always the baseline); path or file name
 --help                   This message
 
@@ -58,6 +59,7 @@ def parse_argv
     '--cam'  => :cam_pattern,
     '--camskip' => :cam_sector_skip,
     '--camfine' => :cam_sector_offset,
+    '--camscale' => :cam_pattern_scale,
     '--crank' => :crank_pattern,
     '--crankskip' => :crank_sector_skip,
     '--crankfine' => :crank_sector_offset,

@@ -23,6 +23,7 @@ class PCMGenerator
     @crank_sector_offset = args[:crank_sector_offset].to_f # 0..1 sectors
     @cam_sector_skip = args[:cam_sector_skip].round # number of tooth to skip before generating
     @crank_sector_skip = args[:crank_sector_skip].round # number of tooth to skip before generating
+    @cam_pattern_scale = args[:cam_pattern_scale].to_f # ratio of cam pattern sectors per cam sector
   end
   def setup_patterns( crank_name, cam_name )
     unless TIMING_PATTERNS.has_key?( crank_name )
@@ -31,7 +32,7 @@ class PCMGenerator
     end
     crank_pattern = TIMING_PATTERNS[ crank_name ]
     @crank_sectors = crank_pattern[:sectors]
-    @crank_sectors *= @cam_crank_ratio if crank_pattern[:type] != :distributor
+    @crank_sectors *= @cam_pattern_scale
     @crank_pattern = crank_pattern[:pattern]
     unless TIMING_PATTERNS.has_key?( cam_name )
       warn "Invalid cam: #{cam_name.inspect}"
