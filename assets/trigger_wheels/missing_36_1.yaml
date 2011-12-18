@@ -1,0 +1,8 @@
+sectors: 36
+type: missing_tooth
+pattern:
+  - repeat:
+    - 35 # number of repetitions
+    - [ 0.5, false ]
+    - [ 0.5, true  ]
+  - [ 1.0, false ]

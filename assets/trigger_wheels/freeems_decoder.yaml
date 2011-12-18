@@ -1,0 +1,19 @@
+sectors: 72 # sectors of a full rotation
+type: distributor # scaled to fit cam cycle, even if on crank
+pattern:
+  - [ 1.0, false ]
+  - [ 8.0, true  ]
+  - [ 2.0, false ]
+  - [ 7.0, true  ]
+  - [ 3.0, false ]
+  - [ 6.0, true  ]
+  - [ 4.0, false ]
+  - [ 5.0, true  ]
+  - [ 5.0, false ]
+  - [ 4.0, true  ]
+  - [ 6.0, false ]
+  - [ 3.0, true  ]
+  - [ 7.0, false ]
+  - [ 2.0, true  ]
+  - [ 8.0, false ]
+  - [ 1.0, true  ]

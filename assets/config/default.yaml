@@ -1,0 +1,18 @@
+### Debugging settings:
+verbose:          false # whether to display verbose output or be silent
+### Engine settings:
+rpm:              1000  # engine speed in revolutions per minute
+cam_crank_ratio:  2.0   # 4-stroke: 2.0, 2-stroke: 1.0
+### Cam wheel settings:
+cam_sector_skip:    0    # amount of cam sectors to initially skip
+cam_sector_offset:  0.0  # initial cam tooth position in cam sectors (0.0 to 1.0)
+cam_pattern:        missing_24_1 # name of cam pattern
+### Crank wheel settings:
+crank_sector_skip:   0     # amount of crank sectors to initially skip
+crank_sector_offset: 0.0   # initial crank tooth in crank sector ratios (0.0 to 1.0)
+crank_pattern:      missing_60_2 # name of crank pattern
+### PCM Settings
+sample_rate:      44100 # Hz
+### Audio output settings
+len_seconds:      0.12  # length of audio clip; 0.12 seconds is one cam revolution at 1000 rpm on a 4-stroke engine
+destination_file: assets/samples/test.wav # path of destination file

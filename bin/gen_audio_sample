@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+file_path = File.expand_path( $0 )
+bin_path = File.split( file_path ).first
+base_path = File.split( bin_path ).first
+lib_path = File.expand_path( 'lib', base_path )
+$LOAD_PATH.unshift( lib_path )
+
+require 'engine_sim/pcm_gen_argv'
+args = parse_argv
+unless args.nil?
+  require 'engine_sim/pcm_gen'
+  PCMGenerator.new( args )
+end
