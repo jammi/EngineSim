@@ -155,11 +155,14 @@ class PCMGenerator
     if args.has_key?( :extra_config_files )
       extra_conf = args[:extra_config_files]
       args.delete( :extra_config_files )
+      args = parse_config( args )
       extra_conf.each do |extra_conf|
         args = read_config( extra_conf ).merge( args )
       end
+    else
+      args = parse_config( args )
     end
-    args = DEFAULT_ARGS.merge( parse_config( args ) )
+    args = DEFAULT_ARGS.merge( args )
     @verbose = args[:verbose]
     init_args( args )
     setup_patterns( args[:crank_pattern], args[:cam_pattern] )
