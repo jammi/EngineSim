@@ -15,7 +15,7 @@ Just install ruby and add install the *bindata* gem. EngineSim does not depend o
 * Implement more features
 * Write signal generation parts in C
 * Implement complete simulator suite: throttle position sensor, lambda sensor, temperature sensors, air flow sensors, etc.
-* Hardware adapter interfaces for capturing signal samples from actual engines and to the ECU's used.
+* Hardware adapter interfaces for capturing signal samples from actual engines and converting output to the ECU's used.
 
 
 ## Credits and copyright
