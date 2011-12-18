@@ -1,5 +1,6 @@
-sectors: 72
 type: even
 pattern:
-  - [ 0.5, false ]
-  - [ 0.5, true  ]
+  - repeat:
+    - 72
+    - [ 0.5, false ]
+    - [ 0.5, true  ]

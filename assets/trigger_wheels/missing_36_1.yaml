@@ -1,4 +1,4 @@
-sectors: 36
+# Infer 36 segments by adding 35 to 1 and geting 36 :-)
 type: missing_tooth
 pattern:
   - repeat:

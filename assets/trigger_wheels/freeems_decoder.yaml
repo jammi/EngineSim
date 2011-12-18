@@ -1,4 +1,3 @@
-sectors: 72 # sectors of a full rotation
 type: distributor # scaled to fit cam cycle, even if on crank
 pattern:
   - [ 1.0, false ]

@@ -3,6 +3,7 @@ verbose:          false # whether to display verbose output or be silent
 ### Engine settings:
 rpm:              1000  # engine speed in revolutions per minute
 cam_crank_ratio:  2.0   # 4-stroke: 2.0, 2-stroke: 1.0
+cam_cycle_degrees: 720  # Patterns just repeat whatever they are made of inside this
 ### Cam wheel settings:
 cam_sector_skip:    0    # amount of cam sectors to initially skip
 cam_sector_offset:  0.0  # initial cam tooth position in cam sectors (0.0 to 1.0)
