@@ -12,7 +12,6 @@ Just install ruby and add install the *bindata* gem. EngineSim does not depend o
 
 ## TODO
 
-* Make a proper ARGV parser
 * Implement more features
 * Write signal generation parts in C
 * Implement simulator complete suite: throttle position sensor, lambda sensor, temperature sensors, air flow sensors, etc.
