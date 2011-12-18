@@ -1,10 +1,10 @@
 
-= Engine cam/crank trigger samples
+# Engine cam/crank trigger samples
 
 This directory contains audio samples used for simulation playback.
 
 
-== The sample files are encoded like:
+## The sample files are encoded like:
 
 * Container: WAV (Wave/RIFF audio file)
 * Encoding: PCM

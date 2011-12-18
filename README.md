@@ -1,16 +1,16 @@
 
-= EngineSim
+# About EngineSim
 
 EngineSim is an engine signal generator to be used for testing of engine control units and engine management systems.
 Currently, just a couple of encoder wheels are supplied and EngineSim's gen_audio_sample utility is can to produce wav audio files based on that output. Cam shaft signal is generated on the left audio channel and crank shaft signal is generated on the right audio channel.
 
 
-== Installation and dependencies
+## Installation and dependencies
 
 Just install ruby and add install the *bindata* gem. EngineSim does not depend on any system-specific dependencies (yet).
 
 
-== TODO
+## TODO
 
 * Make a proper ARGV parser
 * Implement more features
@@ -19,7 +19,7 @@ Just install ruby and add install the *bindata* gem. EngineSim does not depend o
 * Hardware adapter interfaces for capturing cam/crank signals from actual engines
 
 
-== Credits and copyright
+## Credits and copyright
 
 Copyright 2011 Juha-Jarmo Heinonen
 
